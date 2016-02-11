@@ -1,25 +1,68 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Maekballondisappeared" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blueball" translatesAutoresizingMaskIntoConstraints="NO" id="nSz-Il-tFF">
+                                <rect key="frame" x="20" y="84" width="138" height="92"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="redball" translatesAutoresizingMaskIntoConstraints="NO" id="mBE-Kc-195">
+                                <rect key="frame" x="219" y="84" width="136" height="92"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vo3-Tc-94j">
+                                <rect key="frame" x="113" y="280" width="148" height="47"/>
+                                <state key="normal" title="remove the red ball"/>
+                                <connections>
+                                    <action selector="removebluebal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cag-b8-Ea7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHm-Ni-ltx">
+                                <rect key="frame" x="76" y="357" width="222" height="30"/>
+                                <state key="normal" title="remove the blue ball"/>
+                                <connections>
+                                    <action selector="removeredbal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EfO-LM-jPQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2R-Hk-qGt">
+                                <rect key="frame" x="113" y="436" width="148" height="30"/>
+                                <state key="normal" title="go back"/>
+                                <connections>
+                                    <action selector="takeeverythingback:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Jq-cZ-AGR"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="RMblue" destination="IHm-Ni-ltx" id="NiD-6I-I93"/>
+                        <outlet property="RMred" destination="vo3-Tc-94j" id="YMa-Oy-mb8"/>
+                        <outlet property="blueball" destination="nSz-Il-tFF" id="moc-y6-pYp"/>
+                        <outlet property="goback" destination="L2R-Hk-qGt" id="1jo-8e-GGt"/>
+                        <outlet property="redball" destination="mBE-Kc-195" id="e80-sJ-ppb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="304.5" y="429.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="blueball" width="64" height="64"/>
+        <image name="redball" width="64" height="64"/>
+    </resources>
 </document>
